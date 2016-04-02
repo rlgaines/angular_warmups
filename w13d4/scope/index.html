@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="broken">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <div>
+      <input type="text" ng-model="view.info">
+      {{view.info}}
+    </div>
+    <div ng-controller="ScopeController">
+      <input type="text" ng-model="view.info">
+      {{view.info}}
+    </div>
+  </div>
+     <div ng-controller="MainController">
+    {{view.message}}
+    <div ng-if="view.number === 42">
+        Secret Message: <input type="text" ng-model="view.message">
+    </div>
+  </div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="main.js"></script>
+
+  </body>
+
+</html>
