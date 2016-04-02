@@ -10,6 +10,11 @@
     <h1>My name is: {{name}}</h1>
     <input ng-model="name" type="text" placeholder="What is your name">
   </div>
+  <div ng-controller="ExercisesController">
+   <h3>I swag with the crips, {{favColor}}'s up cuhhhh.</h3>
+   <h3>There are {{secondsInACentury() | number}} seconds in a century.	</h3>
+   <h3>{{rightNow() | date:"fullDate"}}</h3>
+  </div> 
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>

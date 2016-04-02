@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
 	<title></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -71,17 +71,21 @@
 	<h4 ng-model="tip">Tip: {{price * dropdown | currency}}</h4>
 	<h4>Total: {{price -- dropdown*price | currency}}</h4>
 	<hr>
-	<p>Boy's Name: <input ng-model="name" placeholder="Enter boy's name here..."></input></p>
-	<p>Adjective: <input ng-model="adjective" placeholder="Enter adjective here..."></input></p>
-	<p>Plural Noun: <input ng-model="noun" placeholder="Enter plural noun here..."></input></p>
-	<p>Plural Noun: <input ng-model="plural2" placeholder="Enter plural here..."></input></p>
-	<p>Insect, Plural: <input ng-model="insect" placeholder="Enter insect, plural noun here..."></input></p>
-	<p>Plural Noun: <input ng-model="plural3" placeholder="Enter boy's name here..."></input></p>
-	<p>Verb ends in S: <input ng-model="verb" placeholder="Enter boy's name here..."></input></p>
+  <div ng-controller="MadLibController">	
+    <form ng-submit="submit()">
+	<p>Boy's Name: <input type="text" ng-model="text" placeholder="Enter boy's name here..."></input></p>
+	<p>Adjective: <input type="text" ng-model="adjectives" placeholder="Enter adjective here..."></input></p>
+	<p>Plural Noun: <input type="text" ng-model="noun" placeholder="Enter plural noun here..."></input></p>
+	<p>Plural Noun: <input type="text" ng-model="plural2" placeholder="Enter plural here..."></input></p>
+	<p>Insect, Plural: <input type="text" ng-model="insect" placeholder="Enter insect, plural noun here..."></input></p>
+	<p>Plural Noun: <input type="text" ng-model="plural3" placeholder="Enter boy's name here..."></input></p>
+	<p>Verb ends in S: <input type="text" ng-model="verb" placeholder="Enter boy's name here..."></input></p>
+<h3>I'm in love with <span>{{name[0]}}</span>. He's so <span>{{name[1]}}</span>! He has big flat <span>{{noun}}</span>, and when our <span>{{plural2}}</span> meet, I get <span>{{insect}}</span> in my stomach. I've fallen for him like a ton of <span>{{plural3}}</span>, and he <span>{{verb}}</span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
 
+  <input type="submit" id="submit" value="Submit" />
 
-<h3>I'm in love with <span>{{name}}</span>. He's so <span>{{adjective}}</span>! He has big flat <span>{{noun}}</span>, and when our <span>{{plural2}}</span> meet, I get <span>{{insect}}</span> in my stomach. I've fallen for him like a ton of <span>{{plural3}}</span>, and he <span>{{verb}}</span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
-
+  </form>
+</div>
 
 <hr>
 
@@ -180,4 +184,6 @@
 
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
 </html>
